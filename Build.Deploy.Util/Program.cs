@@ -33,6 +33,13 @@ namespace Build.Deploy.Util
 
             try
             {
+                // are we updating resource files, this can be done regardless of IgnoreDebug setting
+                if (ResXUpdater.Initialise())
+                {
+                    ResXUpdater.Execute();
+                    return;
+                }
+
                 // if debug build and we are ignoring debug, then just exit
                 if (!Parameters.OptionExists("Release") && Parameters.OptionExists("IgnoreDebug"))
                 {

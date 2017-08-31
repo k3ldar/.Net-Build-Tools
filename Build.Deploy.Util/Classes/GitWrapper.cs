@@ -68,8 +68,8 @@ namespace Build.Deploy.Util
             Console.WriteLine("  /Git             Path/filename to Git.exe.");
             Console.WriteLine("  /GitRepository   Git Repository Name.");
             Console.WriteLine("  /GitWorkingDir   Repository working directory.");
-            Console.WriteLine("  /GitVersionName  Git Version Tag Name (Default is Version.FileDescription.");
-            Console.WriteLine("  /GitTagName      Git Tag Name (Default is Version.FileDescription.");
+            Console.WriteLine("  /GitVersionName  Git Version Tag Name (Default is Version.FileDescription).");
+            Console.WriteLine("  /GitTagName      Git Tag Name (Default is Version.FileDescription).");
             Console.WriteLine(String.Empty);
         }
 

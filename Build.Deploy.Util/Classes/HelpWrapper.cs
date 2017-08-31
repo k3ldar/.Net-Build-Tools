@@ -24,8 +24,8 @@ namespace Build.Deploy.Util
         {
             Console.WriteLine("Build.Deploy.Util.exe");
             Console.WriteLine("Copyright 2017 (C) Simon Carter.  All Rights Reserved.");
-            Console.WriteLine("Optionally updates Git repository with new build and optionally");
-            Console.WriteLine("builds a nuget package and deploys it.");
+            Console.WriteLine(".Net build and deploy tools.");
+            Console.WriteLine("https://github.com/k3ldar/.Net-Build-Tools");
             Console.WriteLine(String.Empty);
 
             if (Parameters.OptionExists("?"))
@@ -45,6 +45,7 @@ namespace Build.Deploy.Util
                 Console.WriteLine("                   debug versions during development.");
                 Console.WriteLine(String.Empty);
 
+                ResXUpdater.ShowParameters();
                 GitWrapper.ShowParameters();
                 NugetWrapper.ShowParameters();
                 InnoSetupWrapper.ShowParameters();
@@ -64,6 +65,9 @@ namespace Build.Deploy.Util
                 Console.WriteLine(String.Empty);
                 Console.WriteLine("                   VS $(TargetPath) macro can be used to send the");
                 Console.WriteLine("                   target file (.exe/.dll)");
+                Console.WriteLine(String.Empty);
+                Console.WriteLine("                   VS $(ProjectPath) macro can be used to send the");
+                Console.WriteLine("                   project file/path");
                 Console.WriteLine(String.Empty);
                 return (true);
             }

@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  The contents of this file are subject to MIT Licence.  Please
  *  view License.txt for further details. 
  *
@@ -32,4 +32,4 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("69d9e61c-88da-43aa-98c9-de2265845de0")]
 
-[assembly: AssemblyVersion("1.0.0.185")]
+[assembly: AssemblyVersion("1.1.10.223")]

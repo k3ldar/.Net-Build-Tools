@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>/target="T:\GitProjects\Builds\Shared\Release\sharedlib.dll" /git="C:\Program Files\Git\bin\git.exe1" /gitrepository="SharedLib" /GitWorkingDir="T:\GitProjects\SharedLib" /NugetPack="T:\GitProjects\SharedLib\SharedLib.nuspec" /NugetVer=6 /NugetExe="t:\tools\nuget\nuget.exe" /netVersion=net452 /nugetKeyFile="T:\GitProjects\Private NUGET Key.txt" /nugetPush  /innoScript="T:\Program\Installer\POS\Main POS Update File 3.0.iss" /innoExe="C:\Program Files %28x86%29\Inno Setup\5\compil32.exe" /innoSetup="T:\Program\Installer\POS\Builds\Setup_v_{0}.exe" /NugetOverwrite /%3f</StartArguments>
+    <StartArguments>/target="T:\GitProjects\Builds\Shared\Release\sharedlib.dll" /git="C:\Program Files\Git\bin\git.exe1" /gitrepository="SharedLib" /GitWorkingDir="T:\GitProjects\SharedLib" /NugetPack="T:\GitProjects\SharedLib\SharedLib.nuspec" /NugetVer=6 /NugetExe="t:\tools\nuget\nuget.exe" /netVersion=net452 /nugetKeyFile="T:\GitProjects\Private NUGET Key.txt" /nugetPush  /innoScript="T:\Program\Installer\POS\Main POS Update File 3.0.iss" /innoExe="C:\Program Files %28x86%29\Inno Setup\5\compil32.exe" /innoSetup="T:\Program\Installer\POS\Builds\Setup_v_{0}.exe" /NugetOverwrite /ResX /ResXPath="T:\Debug\ResX\Myproject.csproj"  /ResXBackup="T:\Debug\ResX\Backup"</StartArguments>
   </PropertyGroup>
 </Project>

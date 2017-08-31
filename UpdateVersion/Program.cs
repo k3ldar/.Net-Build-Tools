@@ -168,7 +168,7 @@ namespace UpdateVersion
                 Console.WriteLine("  /IncreaseMajor   Increases the major number");
                 Console.WriteLine("  /IncreaseMinor   Increases the minor number");
                 Console.WriteLine("  /IncreaseBuild   Increases the build number");
-                Console.WriteLine("  /Release         Indicates it is a release build (same as /IncreaseBuild");
+                Console.WriteLine("  /Release         Indicates it is a release build (same as /IncreaseBuild)");
                 return (true);
             }
 
