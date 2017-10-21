@@ -1,3 +1,4 @@
 Build.Deploy.Util/obj/
 BuildReleaseVersion.bat
 UpdateVersion/obj/
+/.vs/.NetBuildTools/v15/.suo

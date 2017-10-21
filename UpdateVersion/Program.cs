@@ -169,6 +169,8 @@ namespace UpdateVersion
                 Console.WriteLine("  /IncreaseMinor   Increases the minor number");
                 Console.WriteLine("  /IncreaseBuild   Increases the build number");
                 Console.WriteLine("  /Release         Indicates it is a release build (same as /IncreaseBuild)");
+                Console.WriteLine("  /AssemblyVersion Increases the assembly version, if not specified");
+                Console.WriteLine("                   AssemblyFileVersion is increased.");
                 return (true);
             }
 
@@ -178,14 +180,14 @@ namespace UpdateVersion
         private static void UpdateFileVersion(string fileName, ref string output)
         {
             string text = Utilities.FileRead(fileName, false);
-            string searchString = Parameters.OptionExists("FileVersion") ? SearchStringFile : SearchStringAssembly;
+            string searchString = Parameters.OptionExists("AssemblyVersion") ? SearchStringAssembly : SearchStringFile;
             int posStart = text.IndexOf(searchString);
             int posEnd = text.IndexOf("\")]", posStart + 1);
 
             if (posStart == -1)
             {
                 // version info not found so add it
-                text += Parameters.OptionExists("FileVersion") ? NewStringFile : NewStringAssembly;
+                text += Parameters.OptionExists("AssemblyVersion") ? NewStringAssembly : NewStringFile;
                 posStart = text.IndexOf(searchString);
                 posEnd = text.IndexOf("\")]", posStart + 1);
             }
@@ -207,7 +209,13 @@ namespace UpdateVersion
                 minor++;
 
             if (Parameters.OptionExists("IncreaseBuild") || Parameters.OptionExists("Release"))
-                build++;
+            {
+                // wrap over on 30000, allows for x.x.0.x
+                if (build == 30000)
+                    build = 0;
+                else
+                    build++;
+            }
 
             // always increase revision
             revision++;
